@@ -1,12 +1,50 @@
-#test{
-    top: 5px;
-    background-color: blue;
-    width: 100px;
-    height: 100px;
-    transition:  1s;
+.header{
+    width: 100%;
+    height: 20px;
+    background-color: yellow;
+    transition: 1s;
+    z-index: 100;
+    display: block;
+    position: relative;
 }
 
-#test:hover{
-    top: 50px;
-    transition:  1s;
+.menu{
+    z-index: 5;
+    background-color: aquamarine;
 }
+
+ul {
+    z-index: -10;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+
+
+  }
+
+li{
+    float: left;
+}
+li a { 
+    display: block;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.header:hover ~.inhalt{
+    margin-top: 50px;
+    transition: 1s;
+}
+
+.inhalt{
+    z-index: 100;
+    background-color: blue;
+    width: 100%;
+    height: 100px;
+    transition:  1s;
+    display: block;
+}
+
+
+
