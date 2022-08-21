@@ -1,71 +1,93 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@900&family=Open+Sans:wght@800&display=swap');
-
+body{
+    background-color: #FFF3E5;
+}
 .header{
     width: 100%;
-    height: 20px;
-    background-color: yellow;
+    height: 3px;
+    background-color:#021E27;
     transition: 1s;
     z-index: 100;
-    display: block;
-    position: relative;
-}
-
-.menu{
-    z-index: 5;
-    background-color: aquamarine;
-}
-
-ul {
-    z-index: -10;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     position: absolute;
+    margin-top: 10px;
 
-
-  }
-
-li{
-    float: left;
-}
-li a { 
-    display: block;
-    padding: 10px 30px;
-    text-align: center;
 }
 
-.header:hover ~.inhalt{
-    margin-top: 15px;
-    transition: 0.1s;
-}
-
-.header:hover{
-    margin-bottom: 15px;
-    transition: 0.1s;
-}
 
 .inhalt{
-    z-index: 100;
-    background-color: blue;
+    z-index: 1200;
+    background-color: #021E27;
     width: 100%;
-    height: 100px;
+    height: 3px;
     transition:  1s;
-    display: block;
-
+    margin-top: 10px;
+    position: absolute;
 }
 
-#name{
+#blau{
     font-family: 'Lexend Deca', sans-serif;
-    text-align: center;
-    font-size: 5rem;
-    z-index: -20;
-    margin-top: -35px;
+    text-align: left;
+    font-size: 10rem;
+    z-index: -250;
+    margin-top: -60px;
     margin-bottom: -15px;
-    position: relative;
-
+    margin-left: 5vw;
+    color: #021E27;
 
 }
 
+#pause{
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: left;
+    font-size: 10rem;
+    z-index: -200;
+    color: #06829D;
+    margin-top: -160px;
+    margin-bottom: -15px;
+    margin-left: 15vw;
+}
+#containerBlau{
+    width: 500px;
+    z-index: -1;
+}
+
+#containerPause{
+    width: 700px;
+    z-index: -1;
+
+}
+
+#containerHeader{
+    background-color:  #FFF3E5;
+    height: 40px;
+    width: 100%;
+    z-index: 1500;
+    margin-bottom: -80px;
+    position: relative;
+}
+
+#containerInhalt{
+    background-color: #FFF3E5;
+    margin-top: -40px;
+    height: 40px;
+    width: 100%;
+    z-index: 1500;
+    position: relative;
+    transition: 1s;
+}
+
+#containerSchrift{
+    z-index: 3000;
+}
+
+#containerSchrift:hover ~#containerInhalt{
+    margin-top: 0;
+    transition: 0.8s;
+}
+#containerSchrift:hover ~#containerHeader{
+    margin-bottom: 0px;
+    transition: 0.8s;
+}
 
 
 
