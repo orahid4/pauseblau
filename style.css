@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@900&family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap');
+
 body{
-    background-color: #FFF3E5;
+    margin: 0 auto;
+    font-family: 'Azeret Mono', monospace;
+    position: relative;
 }
+
 .header{
+    position: sticky;
+}
+
+.header-line{
     width: 100%;
     height: 3px;
     background-color:#021E27;
@@ -10,13 +19,12 @@ body{
     z-index: 100;
     position: absolute;
     margin-top: 10px;
-
 }
 
 
 .inhalt{
     z-index: 1200;
-    background-color: #021E27;
+    background-color: #06829D;
     width: 100%;
     height: 3px;
     transition:  1s;
@@ -66,16 +74,6 @@ body{
     position: relative;
 }
 
-#containerInhalt{
-    background-color: #FFF3E5;
-    margin-top: -40px;
-    height: 40px;
-    width: 100%;
-    z-index: 1500;
-    position: relative;
-    transition: 1s;
-}
-
 #containerSchrift{
     z-index: 3000;
 }
@@ -89,5 +87,286 @@ body{
     transition: 0.8s;
 }
 
+/*----------------------Global-----------------------*/
+
+html{
+    background-color: #FFF3E5;
+}
+
+h1{
+    font-size: 48pt;
+    justify-self: center;
+}
+
+h2{
+    font-size: 36pt;
+    justify-self: center;
+}
+
+h3{
+    font-size: 22pt;
+    margin-top: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.row{
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.line{
+    width: 100%;
+    margin:0;
+    grid-column: span 12;
+}
+
+.wellenbrecher{
+    background-image:url("https://www.fillmurray.com/700/400");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    margin-bottom: 120px;
+}
+
+.wellenbrecher:hover{
+
+}
+
+button{
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.tag{
+    background-color: #06829D;
+    padding: 2px 15px;
+    border-radius: 10px;
+    color: #FFF3E5;
+}
+.tag2{
+    background-color: rgb(212, 8, 8);
+    padding: 2px 15px;
+    border-radius: 10px;
+    color: #FFF3E5;
+}
+
+/*----------XX----------Global----------XX-----------*/
 
 
+/*----------------------Navbar-----------------------*/
+
+#menu{
+    background-color: #FFF3E5;
+    margin-top: -40px;
+    height: 40px;
+    width: 100%;
+    z-index: 1500;
+    position: relative;
+    transition: 1s;
+}
+
+#menu:hover .nav{
+    display: block;
+    transition:0s;
+}
+
+.nav{
+    background-color: #06829D;
+    height: 0rem;
+    min-height: 2vh;
+    padding: 1% 1rem;
+    display: none;
+    transition: 2s;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .nav-items{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav .nav-items .nav-links{
+    padding: 0 1rem;
+    margin: 0 0.1rem;
+    border-radius: 10px;
+}
+
+.nav .nav-items .nav-links:hover{
+    background-color: #FFF3E5;
+    padding: 0 1rem;
+    margin: 0 0.1rem;
+}
+
+.nav .nav-items .nav-links:hover a{
+    color: #021E27;
+}
+
+.nav .nav-items .nav-links a{
+    color: #FFF3E5;
+    padding: 1rem;
+}
+
+.nav .nav-brand a{
+    font-size: 12pt;
+    color: #FFF3E5;
+    padding: 0 1rem;
+    border: 1px solid #FFF3E5;
+    display: block;
+}
+    
+
+/*-----------XX----------Navbar-----------XX-----------*/
+
+
+/*--------------------First Section--------------------*/
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 30px;
+    row-gap: 60px;
+  }
+
+  main{
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    position: relative;
+  }
+
+  main h1{
+    grid-column: span 1;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  main .welcomeSection{
+    grid-column: 2 /span 5;
+  }
+
+  main #firtPic{
+    grid-column: 8 /span 5;
+    width: 100%;
+  }
+
+  .grid-container div p{
+    font-size: 12pt;
+    margin: 0;
+  }
+
+
+/*-------XX--------First Section--------XX--------*/
+
+.issue{
+    grid-column: 3 / span 3;
+    color: #FFF3E5;
+    margin: 120px 0;
+}
+
+
+/*---------------------------Second Section-----------------------------*/
+
+main .pics img{
+    width: 100%;
+}
+
+main .pics{
+    grid-column: span 6;
+}
+
+main .secondaryText{
+    grid-column: span 5;
+}
+
+main h2{
+    grid-column: span 1;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+
+
+/*------------XX-------------Second Section--------------XX-------------*/
+
+
+/*------------------------------Magazin---------------------------------*/
+
+.magazin img{
+    grid-column: 2 / span 7;
+    width: 100%;
+}
+
+.magazin div{
+    grid-column: span 4;
+}
+
+.card{
+    grid-column: span 4;
+}
+
+.card img{
+    width: 100%;
+}
+/*--------------XX--------------Magazin---------------XX---------------*/
+
+.aboutText p{
+    grid-column: 3 / span 8;
+}
+
+/*------------------------------Footer---------------------------------*/
+
+footer{
+    background-color: #06829D;
+    padding: 90px 60px;
+    margin: 0 !important;
+}
+
+footer p{
+    grid-column: 1 / span 8;
+    color: #FFF3E5;
+}
+
+footer div{
+    grid-column: span 3;
+}
+
+footer div p{
+    color: #FFF3E5;
+}
+
+footer div h4{
+    color: #FFF3E5;
+}
+
+/*--------------XX--------------Footer---------------XX---------------*/
+
+
+
+
+/*             Media Queries               */
+
+@media only screen and(max-width: 750px){
+
+}

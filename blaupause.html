@@ -1,18 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="containerHeader"><div class="header"></div></div>
-    <div id="containerSchrift">
-        <div id="containerBlau"><h1 id="blau">Blau</h1></div>
-        <div id="containerPause"><h1 id="pause">pause</h1></div>
-    </div>
-    <div id="containerInhalt"><div class="inhalt"></div></div>
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: block;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <div id="containerHeader">
+                <div class="header-line"></div>
+            </div>
+            <div id="containerSchrift">
+                <div id="containerBlau">
+                    <h1 id="blau">Blau</h1>
+                </div>
+                <div id="containerPause">
+                    <h1 id="pause">pause</h1>
+                </div>
+            </div>
+            <div id="menu" id="sticky-header">
+                <div class="inhalt">
+                    <nav class="nav">
+                        <div class="nav-menu flex-row">
+                            <div class="nav-brand">
+                                <a href="#" class="menu-point">Blaupause</a>
+                            </div>
+                            <div>
+                                <ul class="nav-items">
+                                    <li class="nav-links">
+                                        <a href="#" class="menu-point">Punkt 1</a>
+                                    </li>
+                                    <li class="nav-links">
+                                        <a href="#" class="menu-point">Punkt 1</a>
+                                    </li>
+                                    <li class="nav-links">
+                                        <a href="#" class="menu-point">Punkt 1</a>
+                                    </li>
+                                    <li class="nav-links">
+                                        <a href="#" class="menu-point">Punkt 1</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="nav-social">
+                                <a href="#">instagram</a>
+                            </div>
+        
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+
+        <main class="grid-container">
+            <div class="row">
+                <h1>Welcome</h1>
+                <div class="welcomeSection">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </br></br>
+                        At vero eos et accusam et justo duo dolores et ea
+                        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
+                    </p>
+                </div>
+
+                <img id="firtPic" src="https://i0.wp.com/ig-fotografie.de/wp-content/uploads/2014/08/Paul-Loebe-Haus-Berlin.jpg?w=1024&ssl=1" alt="bill murray">
+            </div>
+        </main>
+
+            <div class="row wellenbrecher">
+            <div class="issue">
+                    <h2>Ausgabe Titel</h2>
+                    <b>Ausgabe 1, Sommer 2022</b>
+                    <p>At vero eos et accusam et justo duo dolores et ea
+                        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p>
+            
+                    <button href="#" >mehr erfahren</button>
+                </div>
+            </div>
+
+        <main class="grid-container">
+            <div class="row">
+                <div class="pics">
+                    <img id="secondPic" src="https://i0.wp.com/ig-fotografie.de/wp-content/uploads/2020/03/Schwarzweiss-Fotografie-Tipps.jpg?resize=1536%2C1024&ssl=1" alt="gabel">
+
+                    <img id="thirdPic" src="https://i0.wp.com/ig-fotografie.de/wp-content/uploads/2020/03/Schwarzweiss-Fotografie-Tipps-2.jpg?resize=1536%2C1024&ssl=1" alt="fueße">    
+                </div>
+
+                <div class="secondaryText">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        <br><br>
+                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                        nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
+                        dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        <br><br>
+                        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                        consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+                        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
+                        augue duis dolore te feugait nulla facilisi.
+                        </p>
+                </div>
+
+                <h2>Sections</h2>
+            </div>
+
+            <div class="row">
+                <hr class="line">
+            </div>
+                
+            <div class="row magazin">
+                <h1>Magazin</h1>
+                <img src="https://mediendesign-kiel.de/wp-content/uploads/2019/04/standard-setup-packshots-1024x575.jpg" alt="booth">
+                <div>
+                    <h3>Hier steht H3</h3>
+                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                        nulla facilisis at vero zril delenit augue duis
+                        dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <br><br> </p>
+                
+                <button>mehr erfahren</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://mediendesign-kiel.de/wp-content/uploads/2019/04/standard-setup-packshots-1024x575.jpg" alt="booth">
+                <h4>Hier steht eine Headline</h4>
+                <p>aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                    gubergren, no sea takimata sanctus. <br> <br>
+                </p>
+                <button>mehr erfahren</button>
+                <a href="#" class="tag">tag</a>
+                <a href="#" class="tag2">tag 2</a>
+            </div>
+            <div class="card">
+                <img src="https://mediendesign-kiel.de/wp-content/uploads/2019/04/standard-setup-packshots-1024x575.jpg" alt="booth">
+                <h4>Hier steht eine Headline</h4>
+                <p>aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                    gubergren, no sea takimata sanctus. <br> <br>
+                </p>
+                <button>mehr erfahren</button>
+            </div><div class="card">
+                <img src="https://mediendesign-kiel.de/wp-content/uploads/2019/04/standard-setup-packshots-1024x575.jpg" alt="booth">
+                <h4>Hier steht eine Headline</h4>
+                <p>aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                    gubergren, no sea takimata sanctus. <br> <br>
+                </p>
+                <button>mehr erfahren</button>
+                <a href="#" class="tag">tag</a>
+            </div>
+
+            <div class="row">
+                <hr class="line">
+            </div>
+
+            <div class="row aboutText">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                    gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                    accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                    amet.
+                </p>
+            </div>
+        </main>
+
+        <footer class="row">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                elitr, sed diam.
+            </p>
+            <hr class="line">
+            <div>
+                <h4>Dies das</h4>
+                <ul>
+                    <li>
+                        <a href="#">Ein Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Ein Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Ein Link</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4>About</h4>
+                <p> No sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                    elitr, sed diam.</p>
+            </div>
+
+        </footer>
+
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementsById("sticky-header");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+            }
+
+        </script>
+    </body>
 </html>
