@@ -165,21 +165,26 @@ ul {
     margin-bottom: 1rem;
     padding: 0.5rem 1rem;
     background-color: #FFF3E5;
-    border: 1px solid #021E27;
+    border: 1px solid var(--primary);
     border-radius: 3px;
     font-weight: 600;
     cursor: pointer;
 }
 
+.button:hover{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
 .tag {
-    background-color: #06829D;
+    background-color: var(--light);
     padding: 2px 15px;
     border-radius: 10px;
     color: #FFF3E5;
 }
 
 .tag2 {
-    background-color: rgb(212, 8, 8);
+    background-color: var(--red);
     padding: 2px 15px;
     border-radius: 10px;
     color: #FFF3E5;
@@ -324,6 +329,8 @@ nav {
 
 /*-----------XX----------Navbar-----------XX-----------*/
 
+/*#######################################################----MAIN---#######################################################################*/
+
 .headspace{
     margin-top: 140px;
 }
@@ -374,7 +381,7 @@ main h1 {
 
 .issue {
     grid-column: 3 / span 3;
-    color: #FFF3E5;
+    color: var(--white);
     margin: 120px 0;
 }
 
@@ -432,17 +439,19 @@ main h2 {
     grid-column: 3 / span 8;
 }
 
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx----MAIN---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
 /*------------------------------Footer---------------------------------*/
 
 footer {
-    background-color: #06829D;
+    background-color: var(--light);
     padding: 90px 60px;
     margin: 0 !important;
 }
 
 footer p {
     grid-column: 1 / span 8;
-    color: #FFF3E5;
+    color: var(--white);
 }
 
 footer div {
@@ -450,11 +459,11 @@ footer div {
 }
 
 footer div p {
-    color: #FFF3E5;
+    color: var(--white);
 }
 
 footer div h4 {
-    color: #FFF3E5;
+    color: var(--white);
 }
 
 /*--------------XX--------------Footer---------------XX---------------*/
