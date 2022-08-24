@@ -20,6 +20,7 @@ body {
 
 .header {
     position: sticky;
+    margin: 0;
 }
 
 .header-line {
@@ -323,6 +324,9 @@ nav {
 
 /*-----------XX----------Navbar-----------XX-----------*/
 
+.headspace{
+    margin-top: 140px;
+}
 
 /*--------------------First Section--------------------*/
 

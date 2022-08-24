@@ -273,13 +273,16 @@
         window.onscroll = function () { myFunction() };
 
             var header = document.querySelector('nav');
+            var main = document.querySelector('main');
             var sticky = header.offsetTop;
 
             function myFunction() {
                 if (window.pageYOffset > sticky) {
                     header.classList.add("sticky");
+                    main.classList.add('headspace');
                 } else {
                     header.classList.remove("sticky");
+                    main.classList.remove('headspace');
                 }
             }
     </script>
