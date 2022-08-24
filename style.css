@@ -1,20 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@900&family=Open+Sans:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap');
 
-body{
-    margin: 0 auto;
-    font-family: 'Azeret Mono', monospace;
-    position: relative;
+:root {
+    --primary: #021E27;
+    --light: #06829D;
+    --yellow: #F0C808;
+    --red: #DD1C1A;
+    --white: #FFF3E5;
 }
 
-.header{
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Azeret Mono', monospace;
+}
+
+.header {
     position: sticky;
 }
 
-.header-line{
+.header-line {
     width: 100%;
     height: 3px;
-    background-color:#021E27;
+    background-color: #021E27;
     transition: 1s;
     z-index: 100;
     position: absolute;
@@ -22,17 +33,17 @@ body{
 }
 
 
-.inhalt{
+.inhalt {
     z-index: 1200;
     background-color: #06829D;
     width: 100%;
     height: 3px;
-    transition:  1s;
+    transition: 1s;
     margin-top: 10px;
     position: absolute;
 }
 
-#blau{
+#blau {
     font-family: 'Lexend Deca', sans-serif;
     text-align: left;
     font-size: 10rem;
@@ -44,7 +55,7 @@ body{
 
 }
 
-#pause{
+#pause {
     font-family: 'Lexend Deca', sans-serif;
     text-align: left;
     font-size: 10rem;
@@ -54,19 +65,20 @@ body{
     margin-bottom: -15px;
     margin-left: 15vw;
 }
-#containerBlau{
+
+#containerBlau {
     width: 500px;
     z-index: -1;
 }
 
-#containerPause{
+#containerPause {
     width: 700px;
     z-index: -1;
 
 }
 
-#containerHeader{
-    background-color:  #FFF3E5;
+#containerHeader {
+    background-color: #FFF3E5;
     height: 40px;
     width: 100%;
     z-index: 1500;
@@ -74,70 +86,72 @@ body{
     position: relative;
 }
 
-#containerSchrift{
+#containerSchrift {
     z-index: 3000;
 }
 
-#containerSchrift:hover ~#containerInhalt{
+#containerSchrift:hover~#containerInhalt {
     margin-top: 0;
     transition: 0.8s;
 }
-#containerSchrift:hover ~#containerHeader{
+
+#containerSchrift:hover~#containerHeader {
     margin-bottom: 0px;
     transition: 0.8s;
 }
 
 /*----------------------Global-----------------------*/
 
-html{
+html {
     background-color: #FFF3E5;
 }
 
-h1{
+h1 {
     font-size: 48pt;
     justify-self: center;
+    font-weight: 1200;
 }
 
-h2{
+h2 {
     font-size: 36pt;
     justify-self: center;
 }
 
-h3{
+h3 {
     font-size: 22pt;
     margin-top: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.row{
+.row {
     grid-column: span 12;
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 30px;
     margin-bottom: 60px;
-  }
+}
 
-.flex-row{
+.flex-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-.line{
+.line {
     width: 100%;
-    margin:0;
+    margin: 0;
     grid-column: span 12;
 }
 
-.wellenbrecher{
-    background-image:url("https://www.fillmurray.com/700/400");
+.wellenbrecher {
+    background-image: url("https://www.fillmurray.com/700/400");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -145,22 +159,25 @@ ul{
     margin-bottom: 120px;
 }
 
-.wellenbrecher:hover{
-
-}
-
-button{
+.button {
     display: block;
     margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #FFF3E5;
+    border: 1px solid #021E27;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-.tag{
+.tag {
     background-color: #06829D;
     padding: 2px 15px;
     border-radius: 10px;
     color: #FFF3E5;
 }
-.tag2{
+
+.tag2 {
     background-color: rgb(212, 8, 8);
     padding: 2px 15px;
     border-radius: 10px;
@@ -172,114 +189,186 @@ button{
 
 /*----------------------Navbar-----------------------*/
 
-#menu{
-    background-color: #FFF3E5;
-    margin-top: -40px;
-    height: 40px;
-    width: 100%;
-    z-index: 1500;
-    position: relative;
-    transition: 1s;
-}
-
-#menu:hover .nav{
-    display: block;
-    transition:0s;
-}
-
-.nav{
-    background-color: #06829D;
-    height: 0rem;
-    min-height: 2vh;
-    padding: 1% 1rem;
-    display: none;
-    transition: 2s;
-}
-
-.nav .nav-menu{
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-.nav .nav-items{
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+nav {
+    position: relative;
+    padding: 0 32px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: var(--light);
+    border-top: 2px solid var(--light);
 }
 
-.nav .nav-items .nav-links{
-    padding: 0 1rem;
-    margin: 0 0.1rem;
-    border-radius: 10px;
+.sticky{
+    position: fixed;
 }
 
-.nav .nav-items .nav-links:hover{
-    background-color: #FFF3E5;
-    padding: 0 1rem;
-    margin: 0 0.1rem;
+.nav-brand {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 400;
+    padding: 26px 0;
 }
 
-.nav .nav-items .nav-links:hover a{
-    color: #021E27;
-}
-
-.nav .nav-items .nav-links a{
-    color: #FFF3E5;
-    padding: 1rem;
-}
-
-.nav .nav-brand a{
-    font-size: 12pt;
-    color: #FFF3E5;
-    padding: 0 1rem;
-    border: 1px solid #FFF3E5;
+.hamburger {
     display: block;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
 }
-    
+
+.hamburger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: var(--white);
+    border-radius: 4px;
+    z-index: 1;
+    transform-origin: 0 0;
+    transition: 0.4s;
+}
+
+.hamburger:hover span:nth-child(2) {
+    transform: translateX(10px);
+    background-color: var(--primary);
+}
+
+.hamburger.is-active span:nth-child(1) {
+    transform: translate(-1px, 4px) rotate(45deg);
+    width: 25px;
+}
+
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.hamburger.is-active span:nth-child(3) {
+    transform: translate(-4px, 4px) rotate(-45deg);
+    width: 25px;
+}
+
+.menu {
+    display: none;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+    margin: 0 -16px;
+}
+
+.menu a {
+    color: var(--white);
+    margin: 0;
+    transition: 0.4s;
+    align-self: center;
+    padding: 30px;
+}
+
+.menu .is-active {
+    background-color: var(--primary);
+}
+
+.menu a:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 6rem;
+    z-index: 98;
+    opacity: 0;
+    transform: translateY(-100%);
+    background-color: var(--light);
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem;
+    color: var(--white);
+    text-align: center;
+    font-size: 1.25rem;
+    transition: 0.3s;
+}
+
+.mobile-menu a:hover {
+    color: var(--primary);
+    background-color: var(--white);
+}
 
 /*-----------XX----------Navbar-----------XX-----------*/
 
 
 /*--------------------First Section--------------------*/
 
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 30px;
     row-gap: 60px;
-  }
+}
 
-  main{
+main {
     max-width: 1200px;
     margin: 60px auto;
     padding: 20px;
     position: relative;
-  }
+}
 
-  main h1{
+.intro-text {
+    font-size: 14pt !important;
+    font-style: italic;
+}
+
+main h1 {
     grid-column: span 1;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-  }
+}
 
-  main .welcomeSection{
+.welcomeSection {
     grid-column: 2 /span 5;
-  }
+}
 
-  main #firtPic{
+#firstPic {
     grid-column: 8 /span 5;
     width: 100%;
-  }
+}
 
-  .grid-container div p{
+.grid-container div p {
     font-size: 12pt;
     margin: 0;
-  }
+}
 
 
 /*-------XX--------First Section--------XX--------*/
 
-.issue{
+.issue {
     grid-column: 3 / span 3;
     color: #FFF3E5;
     margin: 120px 0;
@@ -288,19 +377,19 @@ button{
 
 /*---------------------------Second Section-----------------------------*/
 
-main .pics img{
+main .pics img {
     width: 100%;
 }
 
-main .pics{
+main .pics {
     grid-column: span 6;
 }
 
-main .secondaryText{
+main .secondaryText {
     grid-column: span 5;
 }
 
-main h2{
+main h2 {
     grid-column: span 1;
     writing-mode: vertical-rl;
     text-orientation: mixed;
@@ -313,50 +402,54 @@ main h2{
 
 /*------------------------------Magazin---------------------------------*/
 
-.magazin img{
+.magazin img {
     grid-column: 2 / span 7;
     width: 100%;
 }
 
-.magazin div{
+.magazin div {
     grid-column: span 4;
 }
 
-.card{
+.card {
     grid-column: span 4;
+    padding: 1rem;
+    box-shadow: 8px 10px 20px gray;
+    background-color: #fffaf4;
 }
 
-.card img{
+.card img {
     width: 100%;
 }
+
 /*--------------XX--------------Magazin---------------XX---------------*/
 
-.aboutText p{
+.aboutText p {
     grid-column: 3 / span 8;
 }
 
 /*------------------------------Footer---------------------------------*/
 
-footer{
+footer {
     background-color: #06829D;
     padding: 90px 60px;
     margin: 0 !important;
 }
 
-footer p{
+footer p {
     grid-column: 1 / span 8;
     color: #FFF3E5;
 }
 
-footer div{
+footer div {
     grid-column: span 3;
 }
 
-footer div p{
+footer div p {
     color: #FFF3E5;
 }
 
-footer div h4{
+footer div h4 {
     color: #FFF3E5;
 }
 
@@ -367,6 +460,64 @@ footer div h4{
 
 /*             Media Queries               */
 
-@media only screen and(max-width: 750px){
+@media screen and (max-width: 768px) {
+
+    .welcomeSection {
+        grid-column: 3 / span 10;
+    }
+
+    #firstPic {
+        grid-column: 1 / span 12;
+    }
+
+    .card {
+        grid-column: span 12 !important;
+    }
+
+    .issue {
+        grid-column: 2 / span 10;
+    }
+
+    main .pics {
+        grid-column: span 12;
+    }
+
+    main .secondaryText {
+        grid-column: span 10;
+    }
+
+    .magazin h1 {
+        grid-column: span 12;
+        writing-mode: horizontal-tb;
+    }
+
+    .magazin img {
+        grid-column: span 12;
+    }
+
+    .magazin div {
+        grid-column: span 12;
+    }
+
+    .aboutText p {
+        grid-column: span 12;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
 
 }
