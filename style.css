@@ -25,12 +25,12 @@ body {
 
 .header-line {
     width: 100%;
-    height: 3px;
+    height: 30px;
     background-color: #021E27;
     transition: 1s;
     z-index: 100;
     position: absolute;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 
@@ -47,11 +47,11 @@ body {
 #blau {
     font-family: 'Lexend Deca', sans-serif;
     text-align: left;
-    font-size: 10rem;
+    font-size: 10em;
     z-index: -250;
-    margin-top: -60px;
+    margin-top: 7px;
     margin-bottom: -15px;
-    margin-left: 5vw;
+    margin-left: 5%;
     color: #021E27;
 
 }
@@ -59,17 +59,18 @@ body {
 #pause {
     font-family: 'Lexend Deca', sans-serif;
     text-align: left;
-    font-size: 10rem;
+    font-size: 10em;
     z-index: -200;
     color: #06829D;
     margin-top: -160px;
-    margin-bottom: -15px;
-    margin-left: 15vw;
+    margin-bottom: -17px;
+    margin-left: 15%;
 }
 
 #containerBlau {
     width: 500px;
     z-index: -1;
+    position: relative;
 }
 
 #containerPause {
@@ -83,12 +84,13 @@ body {
     height: 40px;
     width: 100%;
     z-index: 1500;
-    margin-bottom: -80px;
+    margin-bottom: -60px;
     position: relative;
 }
 
 #containerSchrift {
-    z-index: 3000;
+    z-index: 5000;
+    position: relative;
 }
 
 #containerSchrift:hover~#containerInhalt {
@@ -197,6 +199,7 @@ ul {
 
 .nav-container {
     max-width: 1400px;
+    height: 30px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -281,7 +284,9 @@ nav {
     margin: 0;
     transition: 0.4s;
     align-self: center;
-    padding: 30px;
+    padding: 0 30px;
+    border-radius: 5px;
+    border-color: #021E27;
 }
 
 .menu .is-active {
