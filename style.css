@@ -20,7 +20,7 @@ body {
 
 .header {
     position: sticky;
-    margin: auto;
+    margin: 0;
 }
 
 .header-line {
