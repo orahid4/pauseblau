@@ -1,6 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@900&family=Open+Sans:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap');
 
+@font-face {
+    font-family: ‘League Spartan Variable’;
+    src: url('LeagueSpartanVariable.woff2') format('woff2-variations');
+    font-weight: 200 900;
+}
+
+@font-face { 
+    font-family: 'League Mono Variable';
+    src: url('LeagueMono-VF.woff2') format('woff2-variations');
+    font-weight: 200 800;
+    font-stretch: 25% 100%;
+    font-style: normal;
+}
+
+
+@keyframes Blau {
+    from{font-weight: 800; font-stretch: 100%; transition: 1s;}
+    to {font-weight: 100; font-stretch: 25%; transition: 1s;}
+}
+
+@keyframes Blau2 {
+    0% {font-weight: 800; font-stretch: 100%; font-size: 10em;}
+    50% {font-weight: 200; font-stretch: 25%; font-size: 12em;}  
+}
+
 :root {
     --primary: #021E27;
     --light: #06829D;
@@ -21,6 +46,10 @@ body {
 .header {
     position: sticky;
     margin: 0;
+}
+
+.header:hover ~#pause{
+    font-weight: 200;
 }
 
 .header-line {
@@ -45,33 +74,43 @@ body {
 }
 
 #blau {
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'League Mono Variable';
+    font-weight: 800;
+    font-stretch:extra-condensed;
     text-align: left;
     font-size: 10em;
     z-index: -250;
-    margin-top: 7px;
+    margin-top: 25px;
     margin-bottom: -15px;
     margin-left: 5%;
     color: #021E27;
+    transition: 1s;
 
 }
 
+
 #pause {
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'League Mono Variable';
+    font-weight: 800;
+    font-stretch:extra-condensed;
     text-align: left;
     font-size: 10em;
     z-index: -200;
     color: #06829D;
-    margin-top: -160px;
+    margin-top: -100px;
     margin-bottom: -17px;
     margin-left: 15%;
+    transition: 1s;
 }
+
+
 
 #containerBlau {
     width: 500px;
     z-index: -1;
     position: relative;
 }
+
 
 #containerPause {
     width: 700px;
@@ -86,6 +125,7 @@ body {
     z-index: 1500;
     margin-bottom: -60px;
     position: relative;
+    transition: 1s;
 }
 
 #containerSchrift {
@@ -93,9 +133,13 @@ body {
     position: relative;
 }
 
-#containerSchrift:hover~#containerInhalt {
-    margin-top: 0;
-    transition: 0.8s;
+#containerSchrift:hover #blau,
+#containerSchrift:hover #pause {
+    transition: 1s;
+    animation-name: Blau2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #containerSchrift:hover~#containerHeader {
@@ -362,9 +406,21 @@ main {
 }
 
 main h1 {
+    font-family: 'League Mono Variable';
+    font-weight: 800;
     grid-column: span 1;
     writing-mode: vertical-rl;
     text-orientation: mixed;
+    transition: 1s;
+}
+
+main:hover h1{
+    color:#021E27;
+    font-weight: 900;
+    font-stretch: extra-expanded;
+    transition: 1s;
+    font-size: 7em;
+    padding: 5px;
 }
 
 .welcomeSection {
@@ -384,10 +440,21 @@ main h1 {
 
 /*-------XX--------First Section--------XX--------*/
 
+.row .wellenbrecher:hover{
+
+}
+
 .issue {
+    font-family: 'League Mono Variable';
+    font-weight: 400;
     grid-column: 3 / span 3;
     color: var(--white);
     margin: 120px 0;
+}
+
+.issue .p{
+    font-stretch: extra-expanded;
+    overflow: hidden;
 }
 
 
