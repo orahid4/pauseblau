@@ -142,7 +142,7 @@ body {
     transition: 1s;
     animation-name: Blau2;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-direction: alternate;
 }
 
@@ -411,21 +411,36 @@ main {
 
 main h1 {
     font-family: 'League Mono Variable';
+    font-size: 3em;
+    color:#021E27;
     font-weight: 800;
     grid-column: span 1;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transition: 1s;
+    position: relative;
+}
+#sections{
+    transition: 1s;
+}
+#title{
+    transition: 1s;
 }
 
-main:hover h1{
-    color:#021E27;
+.newclass{
+    color:#06829D;
     font-weight: 900;
     font-stretch: extra-expanded;
     transition: 1s;
     font-size: 7em;
-    padding: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
+
+
+
+html:not([data-scroll='0']) main h1{}
 
 .welcomeSection {
     grid-column: 2 /span 5;
